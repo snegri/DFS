@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm dFileS
+ps -ef | grep dFileS | grep -v grep | awk '{print $2}' | xargs kill
+echo "Compiling..."
+g++ -std=c++11 client.cpp md5.cpp 
+mv a.out client
+./client dfc.conf

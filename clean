@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm DFS1/Spencer/*
+rm DFS2/Spencer/*
+rm DFS3/Spencer/*
+rm DFS4/Spencer/*
+rm DFS1/user/*
+rm DFS2/user/*
+rm DFS3/user/*
+rm DFS4/user/*
+

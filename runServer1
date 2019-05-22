@@ -1,0 +1,15 @@
+#!/bin/bash
+
+rm server
+#rm  DFS1/Spencer/*
+#rm  DFS2/Spencer/*
+#rm  DFS3/Spencer/*
+#rm  DFS4/Spencer/*
+ps -ef | grep DFSserver | grep -v grep | awk '{print $2}' | xargs kill
+echo "Compiling server..."
+g++ -std=c++11 server.cpp
+mv a.out DFSserver
+./DFSserver DFS1/ 8000 &
+./DFSserver DFS2/ 8001 &
+./DFSserver DFS3/ 8002 &
+#./DFSserver DFS4/ 8003 &
